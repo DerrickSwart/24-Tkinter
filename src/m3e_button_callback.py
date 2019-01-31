@@ -8,7 +8,7 @@ Example showing for tkinter and ttk:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and Derrick Swart.
+         and Derrick Swart .
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
