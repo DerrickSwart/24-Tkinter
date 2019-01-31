@@ -102,5 +102,13 @@ def number_of_prints(entry1, entry2):
     for k in range (int(entry2_contents)):
         print(entry1_contents)
 def fun_button():
-    print('josh is no fun')
+    print('\  0  /')
+    print(' \ | / ')
+    print('  \|/   ')
+    print('   |   ')
+    print('   |   ')
+    print('  / \   ')
+    print(' /   \ ')
+    print('/      \ ')
+
 main()
