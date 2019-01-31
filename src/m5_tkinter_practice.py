@@ -22,7 +22,7 @@ def main():
     # DONE: 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
     # -------------------------------------------------------------------------
-    frame1 = ttk.Frame(root, padding = 100, relief = 'groove')
+    frame1 = ttk.Frame(root, padding = 100, relief = 'raised')
     frame1.grid()
     # -------------------------------------------------------------------------
     # DONE: 4. After reading and understanding the m2e module,
@@ -37,16 +37,20 @@ def main():
     # -------------------------------------------------------------------------
     hello_button['command']= (lambda:hello())
     # -------------------------------------------------------------------------
-    # TODO: 6. After reading and understanding the m4e module,
+    # DONE: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
     #   -- Put a second Button on the Frame.
     #   -- Make this new Button, when pressed, print "Hello"
     #        on the Console if the current string in the Entry box
     #        is the string 'ok', but print "Goodbye" otherwise.
     # -------------------------------------------------------------------------
-
+    entry_box1 = ttk.Entry(frame1)
+    entry_box1.grid()
+    ok_goodbye_button = ttk.Button(frame1,text = 'Hello or Goodbye')
+    ok_goodbye_button.grid()
+    ok_goodbye_button['command'] = (lambda : hello_goodbye(entry_box1))
     # -------------------------------------------------------------------------
-    # TODO: 7.
+    # DONE: 7.
     #    -- Put a second Entry on the Frame.
     #    -- Put a third Button on the frame.
     #    -- Make this new Button respond to a button-press as follows:
@@ -68,10 +72,17 @@ def main():
     #      s = entry_box.get()
     #      n = int(s)
     ####################################################################
-
+    entry_box2 = ttk.Entry(frame1)
+    entry_box2.grid()
+    number_button = ttk.Button(frame1, text='number of times')
+    number_button.grid()
+    number_button['command'] = (lambda: number_of_prints(entry_box1, entry_box2))
     # -------------------------------------------------------------------------
-    # TODO: 8. As time permits, do other interesting GUI things!
+    # DONE: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
+    fun = ttk.Button(frame1, text = 'fun button')
+    fun.grid()
+    fun['command'] = (lambda: fun_button())
 
     root.mainloop()
 # -----------------------------------------------------------------------------
@@ -79,5 +90,17 @@ def main():
 # -----------------------------------------------------------------------------
 def hello():
     print('Hello')
-
+def hello_goodbye(entry_box_1):
+    contents_entry1 = entry_box_1.get()
+    if contents_entry1 == 'ok':
+        print('hello')
+    else:
+        print('goodbye')
+def number_of_prints(entry1, entry2):
+    entry1_contents = entry1.get()
+    entry2_contents = entry2.get()
+    for k in range (int(entry2_contents)):
+        print(entry1_contents)
+def fun_button():
+    print('josh is no fun')
 main()
