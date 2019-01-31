@@ -17,17 +17,19 @@ def main():
     #   ** make a window that shows up. **
     # -------------------------------------------------------------------------
     root = tkinter.Tk()
-    root.mainloop()
+
     # -------------------------------------------------------------------------
-    # TODO: 3. After reading and understanding the m2e module,
+    # DONE: 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
     # -------------------------------------------------------------------------
-    main_frame = main_frame
+    frame1 = ttk.Frame(root, padding = 100, relief = 'groove')
+    frame1.grid()
     # -------------------------------------------------------------------------
-    # TODO: 4. After reading and understanding the m2e module,
+    # DONE: 4. After reading and understanding the m2e module,
     #   ** put a Button on the Frame. **
     # -------------------------------------------------------------------------
-
+    hello_button = ttk.Button(frame1, text = 'Hello')
+    hello_button.grid()
     # -------------------------------------------------------------------------
     # TODO: 5. After reading and understanding the m3e module,
     #   ** make your Button respond to a button-press **
@@ -71,7 +73,7 @@ def main():
     # TODO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
 
-
+    root.mainloop()
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
