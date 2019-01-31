@@ -29,7 +29,7 @@ def main():
     #   ** put a Button on the Frame. **
     # -------------------------------------------------------------------------
     hello_button = ttk.Button(frame1, text = 'Hello')
-    hello_button.grid()
+    hello_button.grid(row = 1, column = 1)
     # -------------------------------------------------------------------------
     # DONE: 5. After reading and understanding the m3e module,
     #   ** make your Button respond to a button-press **
@@ -45,9 +45,9 @@ def main():
     #        is the string 'ok', but print "Goodbye" otherwise.
     # -------------------------------------------------------------------------
     entry_box1 = ttk.Entry(frame1)
-    entry_box1.grid()
+    entry_box1.grid(row = 2, column = 0)
     ok_goodbye_button = ttk.Button(frame1,text = 'Hello or Goodbye')
-    ok_goodbye_button.grid()
+    ok_goodbye_button.grid(row = 3, column = 0)
     ok_goodbye_button['command'] = (lambda : hello_goodbye(entry_box1))
     # -------------------------------------------------------------------------
     # DONE: 7.
@@ -73,15 +73,15 @@ def main():
     #      n = int(s)
     ####################################################################
     entry_box2 = ttk.Entry(frame1)
-    entry_box2.grid()
+    entry_box2.grid(row = 2, column = 2)
     number_button = ttk.Button(frame1, text='number of times')
-    number_button.grid()
+    number_button.grid(row = 3, column = 2)
     number_button['command'] = (lambda: number_of_prints(entry_box1, entry_box2))
     # -------------------------------------------------------------------------
     # DONE: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
     fun = ttk.Button(frame1, text = 'fun button')
-    fun.grid()
+    fun.grid(row = 4, column = 1)
     fun['command'] = (lambda: fun_button())
 
     root.mainloop()
